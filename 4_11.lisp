@@ -1,0 +1,5 @@
+(defun firstzero (x)
+ (cond ((equal 0 (first x)) 'first)
+       ((equal 0 (second x)) 'second)
+       ((equal 0 (third x)) 'third)
+       (t 'none)))

@@ -1,0 +1,11 @@
+(defun price-change (old new)
+ (let* ((diff (- new old))
+        (proportion (/ diff old))
+        (percentage (* proportion 100.0)))
+  (list 'widgets 'changed 'by percentage 'percentage)))
+
+(defun fair-coin ()
+ (let ((toss (random 101)))
+  (cond ((< toss 50) 'heads)
+        ((> toss 50) 'tails)
+        (t 'edge))))

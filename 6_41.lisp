@@ -46,7 +46,9 @@
 
 (defun where ()
  (let ((up-or-down (if (upstairsp loc) 'upstairs 'downstairs)))
-  (list 'robbie 'is up-or-down 'in 'the loc)))
+ (if (onstairsp loc)
+     (list 'robbie 'is 'on 'the 'front-stairs)
+     (list 'robbie 'is up-or-down 'in 'the loc))))
 
 (defun move (direction)
  (let ((new-room (look direction loc)))

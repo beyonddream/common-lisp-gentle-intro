@@ -1,0 +1,5 @@
+(defun arith-eval (exp)
+  (cond ((numberp exp) exp)
+        (t (funcall (second exp)
+                    (arith-eval (first exp))
+                    (arith-eval (third exp))))))
